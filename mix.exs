@@ -18,7 +18,7 @@ defmodule Planet.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {Planet.Application, []},
+      mod: {Planet, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -57,7 +57,9 @@ defmodule Planet.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:bandit, "~> 1.2"}
+      {:bandit, "~> 1.2"},
+      {:desktop, "~> 1.5"},
+      {:wx, "~> 1.1", hex: :bridge, targets: [:android, :ios]}
     ]
   end
 

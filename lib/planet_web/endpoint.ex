@@ -1,14 +1,15 @@
 defmodule PlanetWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :planet
+  use Desktop.Endpoint, otp_app: :planet
 
   # The session will be stored in the cookie and signed,
   # this means its contents can be read but not tampered with.
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
-    store: :cookie,
+    store: :ets,
     key: "_planet_key",
-    signing_salt: "u/DvFKpX",
-    same_site: "Lax"
+    # signing_salt: "u/DvFKpX",
+    # same_site: "Lax"
+    table: :session
   ]
 
   socket "/live", Phoenix.LiveView.Socket,

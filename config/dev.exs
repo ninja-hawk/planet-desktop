@@ -27,7 +27,8 @@ config :planet, PlanetWeb.Endpoint,
   watchers: [
     esbuild: {Esbuild, :install_and_run, [:planet, ~w(--sourcemap=inline --watch)]},
     tailwind: {Tailwind, :install_and_run, [:planet, ~w(--watch)]}
-  ]
+  ],
+  server: true
 
 # ## SSL Support
 #
