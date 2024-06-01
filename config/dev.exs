@@ -2,7 +2,7 @@ import Config
 
 # Configure your database
 config :planet, Planet.Repo,
-  username: "postgres",
+  username: "planet",
   password: "postgres",
   hostname: "localhost",
   database: "planet_dev",
